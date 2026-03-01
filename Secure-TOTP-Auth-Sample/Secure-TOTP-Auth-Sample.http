@@ -1,0 +1,6 @@
+@Secure_TOTP_Auth_Sample_HostAddress = http://localhost:5253
+
+GET {{Secure_TOTP_Auth_Sample_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
