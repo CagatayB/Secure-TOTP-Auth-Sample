@@ -15,13 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="TwoFactorAuth.Application\Dtos\" />
-    <Folder Include="TwoFactorAuth.Application\Services\" />
-    <Folder Include="TwoFactorAuth.Domain\Entities\" />
-    <Folder Include="TwoFactorAuth.Domain\Interfaces\" />
-    <Folder Include="TwoFactorAuth.Infrastructure\Persistence\" />
-    <Folder Include="TwoFactorAuth.Infrastructure\Security\" />
-    <Folder Include="TwoFactorAuth.WebApi\Endpoints\" />
+    <Folder Include="TwoFactorAuth.Persistence\" />
+    <Folder Include="TwoFactorAuth.WebApi\" />
   </ItemGroup>
 
 </Project>
