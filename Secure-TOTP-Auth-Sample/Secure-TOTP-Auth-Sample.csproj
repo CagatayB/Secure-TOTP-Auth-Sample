@@ -8,7 +8,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.1.0" />
+    <PackageReference Include="Otp.NET" Version="1.4.1" />
+    <PackageReference Include="QRCoder" Version="1.7.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="TwoFactorAuth.Application\Dtos\" />
+    <Folder Include="TwoFactorAuth.Application\Services\" />
+    <Folder Include="TwoFactorAuth.Domain\Entities\" />
+    <Folder Include="TwoFactorAuth.Domain\Interfaces\" />
+    <Folder Include="TwoFactorAuth.Infrastructure\Persistence\" />
+    <Folder Include="TwoFactorAuth.Infrastructure\Security\" />
+    <Folder Include="TwoFactorAuth.WebApi\Endpoints\" />
   </ItemGroup>
 
 </Project>
