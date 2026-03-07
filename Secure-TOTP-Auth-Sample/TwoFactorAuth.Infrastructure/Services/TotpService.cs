@@ -16,7 +16,7 @@ namespace Secure_TOTP_Auth_Sample.TwoFactorAuth.Infrastructure.Services
             byte[] secretKey = KeyGeneration.GenerateRandomKey(20);
             string base32Secret = Base32Encoding.ToString(secretKey);
 
-            // 2. Authenticator uygulamaları için otpauth URI oluşturma
+            // 2. Generating otpauth URLs for authenticator applications.    
             // Format: otpauth://totp/Issuer:UserEmail?secret=SECRET&issuer=Issuer&digits=6&period=30
             // period - How often the code rotates in seconds (standard is 30) 
             string qrCodeUri = $"otpauth://totp/{Uri.EscapeDataString(Issuer)}:{Uri.EscapeDataString(email)}" +
