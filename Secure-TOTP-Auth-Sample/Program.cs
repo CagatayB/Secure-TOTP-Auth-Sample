@@ -17,6 +17,8 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 // Infrastructure
 builder.Services.AddScoped<ITotpService, TotpService>();
 builder.Services.AddScoped<IEncryptionService, AesEncryptionService>();
+builder.Services.AddScoped<IPasswordHasher, BCryptPasswordHasher>();
+
 
 var app = builder.Build();
 
