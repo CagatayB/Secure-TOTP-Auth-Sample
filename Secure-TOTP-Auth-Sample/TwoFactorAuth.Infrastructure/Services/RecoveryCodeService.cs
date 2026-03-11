@@ -4,7 +4,7 @@ using BC = BCrypt.Net.BCrypt;
 
 namespace Secure_TOTP_Auth_Sample.TwoFactorAuth.Infrastructure.Services
 {
-    public class RecoveryCodeServices : IRecoveryCodeService
+    public class RecoveryCodeService : IRecoveryCodeService
     {
         public List<string> GenerateRawCodes(int count = 10)
         {
