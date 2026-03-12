@@ -21,7 +21,16 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
-builder.Services.AddAuthorization();
+builder.Services.AddAuthorization(options =>
+{
+    // Only for users who have passed 2FA verification.
+    options.AddPolicy("FullAccess", policy =>
+        policy.RequireClaim("scope", "full_access"));
+
+    // For users who are only in the 2FA phase.
+    options.AddPolicy("TwoFactorOnly", policy =>
+        policy.RequireClaim("purpose", "2fa"));
+});
 
 // Persistence
 builder.Services.AddScoped<IUserRepository, UserRepository>();
