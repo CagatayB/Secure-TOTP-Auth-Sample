@@ -60,6 +60,8 @@ JSON
 ```
 dotnet ef database update --project TwoFactorAuth.Persistence --startup-project TwoFactorAuth.Api
 ```
+4. Run `dotnet restore`
+5. Run `dotnet run`
 
 # 🔄 Authentication Flow
 1. Register: Create an account via /auth/register.
